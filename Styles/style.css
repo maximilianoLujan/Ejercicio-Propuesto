@@ -22,7 +22,7 @@ body{
 h2{
     text-align: center;
     margin: 0;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 .boton{
     height: 5rem;
@@ -32,6 +32,7 @@ h2{
     right:0.5rem;
     border-radius: 50px;
     background-color: rgb(228, 253, 0) !important;
+    z-index: 999;
 }
 .elmenu{
     position: fixed;
@@ -46,6 +47,7 @@ h2{
     align-items: stretch;
     transition: transform 1s ease;
     transform: translate(-100%,0);
+    z-index: 997;
 }
 .is-active{
     transform: translate(0,0);
@@ -65,4 +67,40 @@ h2{
 .elmenu a:hover{
     color: black;
     background-color: rgb(228, 253, 0);
+}
+
+
+
+
+/*
+Realizando la parte de la seccion 1
+*/
+.contenedorseccion{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.botons1{
+    background-color: rgb(255, 255, 0);
+    height: 3rem;
+    margin: 10px;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 40px;
+}
+.hora{
+    opacity: 0;
+    transform: translate(0,1000px);
+}
+.is-activer{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.reloj{
+    position: absolute;
+    top: 8rem;
+    font-size: x-large;
+    font-weight: 900;
 }
