@@ -1,17 +1,17 @@
 export default function reloj(botoninicreloj,botonfinreloj,reloj,inalarma,finalarma,audio){
     const d = document;
+    let intervalo;
     const $reloj = d.querySelector(reloj),
         $inicioreloj = d.querySelector(botoninicreloj),
         $audio = d.querySelector(audio),
         $inicioalarma = d.querySelector(inalarma);
     d.addEventListener("click",e=>{
         if(e.target.matches(botoninicreloj)){
-            $reloj.style.opacity = 1;
             $inicioreloj.setAttribute("disabled","true");
             $inicioreloj.style.cursor = "auto";
-            let intervalo = setInterval(() => {
+            intervalo = setInterval(() => {
                 let lahora = new Date();
-                let lahorita = (`${lahora.getHours().toString()}:${lahora.getMinutes().toString()}:${lahora.getSeconds().toString()}`)
+                let lahorita = lahora.toLocaleTimeString();
                 $reloj.textContent = lahorita;
             }, 1000);
             $reloj.classList.toggle("is-activer")  
@@ -19,7 +19,8 @@ export default function reloj(botoninicreloj,botonfinreloj,reloj,inalarma,finala
         if (e.target.matches(botonfinreloj)){
             $inicioreloj.removeAttribute("disabled");
             $inicioreloj.style.cursor = "pointer";
-            $reloj.style.opacity = 0;
+            clearInterval(intervalo);
+            $reloj.classList.toggle("is-activer")  
         }
         if (e.target.matches(inalarma)){
             $audio.play();
