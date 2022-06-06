@@ -6,7 +6,7 @@ body{
     padding: 0;
 }
 .miheader{
-    width: 100%;
+    width: 100vw;
     height: 4rem;
     background-color: rgb(228, 253, 0);
     display: flex;
@@ -16,7 +16,7 @@ body{
     margin: auto;
 }
 .seccion{
-    width: 100%;
+    width: 100vw;
     height: 40rem;
 }
 h2{
@@ -39,8 +39,8 @@ h2{
     top: 0;
     bottom: 0;
     background-color: rgb(39, 39, 41);
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,13 +120,12 @@ Realizando la parte de la seccion 2
     background-color: rgb(44, 10, 10);
     margin: auto;
     margin-top: 3rem;
-    position: relative;
+    display: flex;
 }
 .pelota{
     background-color: rgb(255, 255, 0);
-    width: 8rem;
-    height: 8rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    margin: 10px;
-    position: absolute;
+    margin: auto;
 }
