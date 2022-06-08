@@ -1,50 +1,38 @@
 const d = document;
-export default function countdown(img,audio,hours,minutes,seconds){
+export default function countdown(days,img,audio,hours,minutes,seconds,date){
     const $img = d.querySelector(img),
      $audio = d.querySelector(audio),
      $hours = d.querySelector(hours),
      $minutes = d.querySelector(minutes),
-     $seconds = d.querySelector(seconds);
-     let time = new Date(2022,3,0,6,0,0,0);
-     console.log(time)
-     let s = time.getSeconds(),
-     m = time.getMinutes(),
-     h = time.getHours();
+     $seconds = d.querySelector(seconds),
+     $days = d.querySelector(days);
+     let dateM = date.getTime();
 
+    console.log(typeof($days.textContent))
+    let intervalo = setInterval(() => {
+        let dateNow = new Date().getTime(),
+            diference = dateM - dateNow;
+        
+        
+        const dias =(Math.floor(diference/8.64e+7));
+        const horas = (Math.floor((diference -((dias)*8.64e+7))/3.6e+6));
+        const minutos = (Math.floor((diference -dias*8.64e+7-horas*3.6e+6)/60000));
+        const segundos = (Math.floor((diference -dias*8.64e+7-horas*3.6e+6 - minutos*60000)/1000));
 
+            $days.textContent = dias.toString();
+            $hours.textContent = horas.toString();
+            $minutes.textContent = minutos.toString();
+            $seconds.textContent = segundos.toString();
 
-    $hours.textContent = ((time.getHours()).toString());
-    $minutes.textContent = ((time.getMinutes()).toString());
-    $seconds.textContent = ((time.getSeconds()).toString());
-    let pasohora = false;
-    
-
-    let counter = setInterval(() => {
-        if (s === 0){
-            if ((m === 0)&&(h ===0)){
+        if (($days.textContent === "0")&&($hours.textContent === "0")&&($minutes.textContent === "0")&&($seconds.textContent === "0")){
+            clearInterval(intervalo);
+            $img.classList.toggle("img-visible");
+            $audio.play();
+            setTimeout(() => {
                 $img.classList.toggle("img-visible");
-                $audio.play();
-                setTimeout(() => {
-                    $audio.pause();
-                    $img.classList.toggle("img-visible");
-                }, 10000);
-                clearInterval(counter);
-            }
-            if (m===0){
-                if (h !== 0){
-                    h--;
-                    $hours.textContent = (h.toString());
-                    m = 59;
-                    $minutes.textContent = (m.toString());
-                }
-            }else{
-                m--;
-                $minutes.textContent = (m.toString());
-            }
-            s =60;
-        }else {
-            s--;
-            $seconds.textContent = (s.toString());
+                $audio.pause();
+            }, 8000);
         }
     }, 1000);
-}
+    
+} 
