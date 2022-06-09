@@ -1,12 +1,13 @@
 export default function goUp(boton){
-    const d = document,
-        $boton = d.querySelector(boton);
+    const d = document;
 
-    $boton.addEventListener("click", e=>{
-        window.scroll({
-            top: 0,
-            behavior: 'smooth'
-          });
+    d.addEventListener("click", e=>{
+        if (e.target.matches(boton)){
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+              });
+        }
     })
 
 

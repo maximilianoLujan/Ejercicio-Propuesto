@@ -5,6 +5,7 @@ import ball from "./gameball.js";
 import countdown from "./countdown.js";
 import up from "./scrollUp.js";
 import goUp from "./goUp.js";
+import darkMode from "./dark.js";
 
 
 const d = document;
@@ -16,6 +17,7 @@ const d = document;
         reloj(".inr",".finr",".hora",".ina",".fina",".audio");
         up(".boton-up");
         goUp(".boton-up");
+        darkMode(".boton-dark","dark-mode","dark-mode2");
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
     d.addEventListener("keydown", (e)=>{

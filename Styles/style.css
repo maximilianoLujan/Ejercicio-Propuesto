@@ -198,7 +198,25 @@ Realizando la parte de la seccion 2
     background-color: rgb(223, 223, 55);
     opacity: 0.9;
 }
-
+.boton-dark{
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    background-image: url(../Icons/night-mode.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 255, 0);
+    border: none;
+    border-radius:50%;
+    cursor: pointer;
+    z-index: 999;
+}
+.boton-dark:hover{
+    background-color: rgb(223, 223, 55);
+    opacity: 0.9;    
+}
 
 @media only screen and (max-width: 800px) { 
     .countdown--contenedor{
@@ -216,4 +234,16 @@ Realizando la parte de la seccion 2
     .mi-img{
         width: 100%;
     }
-}  
+}
+
+/*
+Para el dark-mode
+*/
+.dark{
+    background-color: rgb(8, 8, 8);
+    color: white;
+}
+.darkh{
+    background-color: rgb(16, 16, 112);
+    color: white;
+}
