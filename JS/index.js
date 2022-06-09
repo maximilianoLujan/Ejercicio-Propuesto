@@ -17,9 +17,9 @@ const d = document;
         reloj(".inr",".finr",".hora",".ina",".fina",".audio");
         up(".boton-up");
         goUp(".boton-up");
-        darkMode(".boton-dark","dark-mode","dark-mode2");
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
+    darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
     d.addEventListener("keydown", (e)=>{
         ball(".pelota",".evento",e)
         teclado(e,".pelota");
