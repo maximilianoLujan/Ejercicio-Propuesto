@@ -6,7 +6,6 @@ export default function ball(ball,stage,e){
     $stage = d.querySelector(stage),
     $limitball = $ball.getBoundingClientRect(),
     $limitstage = $stage.getBoundingClientRect();
-    console.log($limitball,$limitstage)
     switch (e.code) {
     case "ArrowUp":
         if ($limitball.top > $limitstage.top){

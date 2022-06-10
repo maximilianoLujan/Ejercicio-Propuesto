@@ -279,3 +279,43 @@ Realizando la seccion 4 600*450
     width: 600px;
     height: 450px;
 }
+
+
+
+
+
+
+/*
+Realizando la seccion 5
+*/
+.contenedor-sec5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.form-sec5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-sec5 input{
+    width: 100%;
+    margin: 0.5rem;
+    border: none;
+    border-bottom: 1px rgb(0, 0, 73) solid;
+}
+.contenedor-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.contenedor-button button{
+    margin-top:0.5rem;
+    border:none;
+    border-bottom: 1px rgb(0, 0, 73) solid; 
+}
+.contenedor-button button:hover{
+    cursor: pointer;
+}

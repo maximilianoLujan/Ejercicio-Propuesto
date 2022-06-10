@@ -13,14 +13,14 @@ export default function responsiveDesign(enlaces,div1,div2){
     }
     if (w.innerWidth < 1000){
         $enlaces.forEach(el =>{
-            el.classList.toggle("enlace-visible");
+            el.classList.add("enlace-visible");
             control = true;
         })       
     } else{
+        agregarMap();
+        agregarYou();
         $enlaces.forEach(el =>{
-            el.classList.toggle("enlace-visible");
-            agregarMap();
-            agregarYou();
+            el.classList.remove("enlace-visible");
             control = false;
         })       
     }

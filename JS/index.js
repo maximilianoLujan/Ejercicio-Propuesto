@@ -7,6 +7,7 @@ import up from "./scrollUp.js";
 import goUp from "./goUp.js";
 import darkMode from "./dark.js";
 import responsiveDesign from "./responsive.js";
+import formularioVideo from "./formulario.js";
 
 
 const d = document;
@@ -18,7 +19,8 @@ const d = document;
         reloj(".inr",".finr",".hora",".ina",".fina",".audio");
         up(".boton-up");
         goUp(".boton-up");
-        responsiveDesign(".enlace4",".contenedor-youtube",".contenedor-maps");
+        //responsiveDesign(".enlace4",".contenedor-youtube",".contenedor-maps");
+        formularioVideo("url-sec5","widht-sec5","height-sec5",".button-open",".button-close");
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
