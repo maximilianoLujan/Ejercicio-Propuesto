@@ -10,6 +10,7 @@ import responsiveDesign from "./responsive.js";
 import formularioVideo from "./formulario.js";
 import detectar from "./deteccionUsuario.js";
 import conexion from "./checkearConexion.js";
+import detecWbcm from "./detectWebcam.js";
 
 
 const d = document;
@@ -25,6 +26,7 @@ const d = document;
         formularioVideo("url-sec5","widht-sec5","height-sec5",".button-open",".button-close");
         detectar("div-deteccion");
         conexion(".contenedor-conexion")
+        detecWbcm("div-webcam");
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
