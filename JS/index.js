@@ -11,6 +11,7 @@ import formularioVideo from "./formulario.js";
 import detectar from "./deteccionUsuario.js";
 import conexion from "./checkearConexion.js";
 import detecWbcm from "./detectWebcam.js";
+import descubrirGeo from "./geo.js";
 
 
 const d = document;
@@ -27,6 +28,7 @@ const d = document;
         detectar("div-deteccion");
         conexion(".contenedor-conexion")
         detecWbcm("div-webcam");
+        descubrirGeo(".listaDatos");
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
