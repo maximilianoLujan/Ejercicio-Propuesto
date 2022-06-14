@@ -1,21 +1,13 @@
 const d = document;
 export default function buscarElementos(input,items){
-    const $input = d.querySelector(input),
-        $misitems =d.querySelectorAll(items);
-    
+    const $misitems = d.querySelectorAll(items);
+    let indice = 0;
 
-
-
-    d.addEventListener("keydown", e=>{
-        if(e.target.matches(input)){
-            setTimeout(() => {
-                $misitems.forEach(el =>{
-                    let eltxt = el.lastElementChild.firstElementChild.textContent;
-                    console.log(eltxt);
-                    console.log($input.value);
-                })
-            },1000);
+    d.addEventListener("keyup",e=>{
+        if (e.target.matches(input)){
+            $misitems.forEach(el => {
+                el.lastElementChild.firstElementChild.textContent.toLowerCase().includes(e.target.value.toLowerCase()) ?el.classList.remove("filter"):el.classList.add("filter");
+            })
         }
     })
 }
-//el.lastElementChild.firstElementChild.textContent
