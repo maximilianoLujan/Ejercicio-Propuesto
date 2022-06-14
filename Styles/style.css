@@ -405,3 +405,32 @@ Realizando el ejercicio de busqueda dinamica
     visibility: hidden;
     order: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Ejercicio de sorteo digital
+*/
+.seccion11{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

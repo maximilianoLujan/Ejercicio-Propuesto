@@ -13,6 +13,7 @@ import conexion from "./checkearConexion.js";
 import detecWbcm from "./detectWebcam.js";
 import descubrirGeo from "./geo.js";
 import buscarElementos from "./Busqueda.js";
+import calcSorteo from "./sorte.js";
 
 
 const d = document;
@@ -30,7 +31,8 @@ const d = document;
         conexion(".contenedor-conexion")
         detecWbcm("div-webcam");
         descubrirGeo(".listaDatos");
-        buscarElementos(".search-txt",".grid-item")
+        buscarElementos(".search-txt",".grid-item");
+        calcSorteo(".botonsorteo",".lenguajes")
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
