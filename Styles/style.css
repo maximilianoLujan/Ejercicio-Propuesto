@@ -19,6 +19,7 @@ body{
 .seccion{
     width: 100%;
     height: 40rem;
+    overflow-y:hidden;
 }
 h2{
     text-align: center;
@@ -484,21 +485,51 @@ Realizando slider de imagenes
     transform: translateX(2000px);
 }
 .contenedor-img button{
-    height: 5rem;
-    width: 5rem;
+    height: 5.5rem;
+    width: 5.5rem;
     position: absolute;
     top: 45%;
     border-radius: 50%;
     border: none;
     opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .contenedor-img button:hover{
     opacity: 0.8;
     cursor: pointer;
+
 }
 .izquierda{
     left: 1rem;
+    background-image: url(../Icons/left.png);
 }
 .derecha{
     right: 1rem;
+    background-image: url(../Icons/right.png);
+    
+}
+.menumovil{
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(15, 15, 138);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+.menumovil a{
+    text-decoration: none;
+    color: beige;
+}
+@media only screen and (max-width: 1024px) {
+    .menumovil{
+        opacity: 1;
+        visibility: visible;
+    }
 }
