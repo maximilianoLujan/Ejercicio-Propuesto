@@ -1,5 +1,6 @@
 *{
     scroll-behavior: smooth;
+    overflow-x:hidden;
 }
 body{
     margin: 0;
@@ -398,7 +399,7 @@ Realizando el ejercicio de busqueda dinamica
 #seccion10{
     display: flex;
     flex-direction: column;
-    height: 110rem;
+    height: max-content;
 }
 .filter{
     opacity: 0;
@@ -433,4 +434,71 @@ Ejercicio de sorteo digital
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.secsorteo{
+    height: max-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Realizando slider de imagenes
+*/
+.contenedor-slider{
+    width: 100%;
+    height: max-content;
+    display: flex;
+}
+.contenedor-img{
+    width: 800px;
+    height: max-content;
+    margin: auto;
+    position: relative;
+}
+.contenedor-img img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+.desaparecer-img{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-2000px);
+}
+.desaparecer-imgd{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(2000px);
+}
+.contenedor-img button{
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 45%;
+    border-radius: 50%;
+    border: none;
+    opacity: 0.5;
+}
+.contenedor-img button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.izquierda{
+    left: 1rem;
+}
+.derecha{
+    right: 1rem;
 }

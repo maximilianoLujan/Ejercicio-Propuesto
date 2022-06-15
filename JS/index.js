@@ -14,6 +14,7 @@ import detecWbcm from "./detectWebcam.js";
 import descubrirGeo from "./geo.js";
 import buscarElementos from "./Busqueda.js";
 import calcSorteo from "./sorte.js";
+import sliderimg from "./slider.js";
 
 
 const d = document;
@@ -32,7 +33,8 @@ const d = document;
         detecWbcm("div-webcam");
         descubrirGeo(".listaDatos");
         buscarElementos(".search-txt",".grid-item");
-        calcSorteo(".botonsorteo",".lenguajes")
+        calcSorteo(".botonsorteo",".lenguajes");
+        sliderimg(".izquierda",".derecha",".image-slider","Images/Slider/paisaje1.jpg","Images/Slider/paisaje2.jpg","Images/Slider/paisaje3.jpg")
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
