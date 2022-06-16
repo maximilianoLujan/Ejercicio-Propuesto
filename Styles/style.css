@@ -1,6 +1,5 @@
 *{
     scroll-behavior: smooth;
-    overflow-x:hidden;
 }
 body{
     margin: 0;
@@ -219,7 +218,7 @@ Realizando la parte de la seccion 2
     opacity: 0.9;    
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 1020px) { 
     .countdown--contenedor{
         height: fit-content;
         flex-direction: column;
@@ -374,40 +373,50 @@ Realizando el ejercicio de comprobar la conexion
 /*
 Realizando el ejercicio de busqueda dinamica
 */
-.grid-search{
-    width:100%;
-    height: 100rem;
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-}
-.grid-search div{
-    transition: all 0.4s ease;
-}
-.grid-search div img{
-    width: 100%;
-    height: 400px;
-}
-
-.grid-search div h3{
-    text-align: center;
-    font-size: xx-large;
-    color: black;
-}
-.search-txt{
-    margin: auto;
-    width: 20rem;
-}
 #seccion10{
+    width: 100%;
+    height: max-content;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.grid-search{
+    width: 100%;
     height: max-content;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-area: span;
+}
+.grid-item{
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+}
+.cont-img{
+    height: 320px;
+    width: 400px;
+}
+.cont-img img{
+    height: 20rem;
+    width: 400px
 }
 .filter{
     opacity: 0;
     visibility: hidden;
-    order: 1;
 }
 
+@media only screen and (max-width: 1250px) {
+    .grid-search{
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 840px) {
+    .grid-search{
+        grid-template-columns: auto;
+        justify-content: space-around;
+    }
+}
 
 
 
@@ -463,6 +472,9 @@ Realizando slider de imagenes
     height: max-content;
     display: flex;
 }
+#seccion12{
+    overflow-x: hidden;
+}
 .contenedor-img{
     width: 800px;
     height: max-content;
@@ -509,6 +521,25 @@ Realizando slider de imagenes
     background-image: url(../Icons/right.png);
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Realizando el ejercicio del menu movil
+*/
 .menumovil{
     height: 100%;
     width: 30%;
@@ -531,5 +562,8 @@ Realizando slider de imagenes
     .menumovil{
         opacity: 1;
         visibility: visible;
+    }
+    body{
+        width: 70%;
     }
 }

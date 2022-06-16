@@ -6,7 +6,7 @@ export default function buscarElementos(input,items){
     d.addEventListener("keyup",e=>{
         if (e.target.matches(input)){
             $misitems.forEach(el => {
-                el.lastElementChild.firstElementChild.textContent.toLowerCase().includes(e.target.value.toLowerCase()) ?el.classList.remove("filter"):el.classList.add("filter");
+                el.lastElementChild.textContent.toLowerCase().includes(e.target.value.toLowerCase()) ?el.classList.remove("filter"):el.classList.add("filter");
             })
         }
     })
