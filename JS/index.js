@@ -37,7 +37,7 @@ const d = document;
         buscarElementos(".search-txt",".grid-item");
         calcSorteo(".botonsorteo",".lenguajes");
         sliderimg(".izquierda",".derecha",".image-slider","Images/Slider/paisaje1.jpg","Images/Slider/paisaje2.jpg","Images/Slider/paisaje3.jpg");
-        //observarScroll(".seccion",".enlacemenu");
+        observarScroll(".seccion");
         observarvideo("videofutbol");
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })

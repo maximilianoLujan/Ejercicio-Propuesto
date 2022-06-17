@@ -542,38 +542,17 @@ Realizando slider de imagenes
 /*
 Realizando el ejercicio del menu movil
 */
-.menumovil{
-    height: 100%;
-    width: 30%;
-    position: fixed;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(15, 15, 138);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-}
-.enlacemenu{
-    width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-.menumovil a{
-    text-decoration: none;
-    color: beige;
-    height: 5rem;
-    margin: auto;
-}
-.enlacemenuvisible{
-    background-color: yellow;
-    color: black !important;
-}
-
 @media only screen and (min-width: 1024px) {
+    .boton{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .elmenu{
+        height: 100%;
+        width: 30%;
+        transform: translate(0,0);
+        right: 0;
+    }
     .menumovil{
         opacity: 1;
         visibility: visible;
@@ -612,4 +591,8 @@ Realizando la seccion
 .seccion13 div video{
     width: 100%;
     height: 100%;
+}
+.enlaceactivo{ 
+    color: black !important;
+    background-color: rgb(228, 253, 0);
 }

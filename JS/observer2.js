@@ -1,4 +1,5 @@
-const d = document;
+const d = document,
+    w = window;
 export default function observarvideo(video){
     const $mivideo = d.getElementById(video);
     const reproducir = (entries)=>{
@@ -8,14 +9,13 @@ export default function observarvideo(video){
             }
             else{
                 $mivideo.pause()
-                $mivideo.currentTime = 0;
             } 
         }) 
-        
     }
     const myObserver = new IntersectionObserver(reproducir,
     {
         threshold: 0.5
     })
     myObserver.observe($mivideo);
+
 }
