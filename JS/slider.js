@@ -2,9 +2,6 @@ const d = document;
 export default function sliderimg(boton1,boton2,img,url1,url2,url3){
     const $miimg = d.querySelector(img);
     let auxiliar = 1;
-
-
-    console.log($miimg);
     d.addEventListener("click", e =>{
         if (e.target.matches(boton1)){
             switch (auxiliar) {

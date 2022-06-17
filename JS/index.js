@@ -15,6 +15,7 @@ import descubrirGeo from "./geo.js";
 import buscarElementos from "./Busqueda.js";
 import calcSorteo from "./sorte.js";
 import sliderimg from "./slider.js";
+import observarScroll from "./observer.js";
 
 
 const d = document;
@@ -34,7 +35,8 @@ const d = document;
         descubrirGeo(".listaDatos");
         buscarElementos(".search-txt",".grid-item");
         calcSorteo(".botonsorteo",".lenguajes");
-        sliderimg(".izquierda",".derecha",".image-slider","Images/Slider/paisaje1.jpg","Images/Slider/paisaje2.jpg","Images/Slider/paisaje3.jpg")
+        sliderimg(".izquierda",".derecha",".image-slider","Images/Slider/paisaje1.jpg","Images/Slider/paisaje2.jpg","Images/Slider/paisaje3.jpg");
+        observarScroll(".seccion",".enlacemenu");
         //countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");

@@ -384,13 +384,22 @@ Realizando el ejercicio de busqueda dinamica
     width: 100%;
     height: max-content;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-area: span;
+    grid-template-columns: auto auto;
 }
 .grid-item{
     height: 400px;
     width: 400px;
     margin: 10px;
+    background-color: rgb(8, 8, 100);
+    position: relative;
+}
+.grid-item h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+    color: azure;
 }
 .cont-img{
     height: 320px;
@@ -403,13 +412,6 @@ Realizando el ejercicio de busqueda dinamica
 .filter{
     opacity: 0;
     visibility: hidden;
-}
-
-@media only screen and (max-width: 1250px) {
-    .grid-search{
-        grid-template-columns: auto auto;
-        justify-content: space-around;
-    }
 }
 @media only screen and (max-width: 840px) {
     .grid-search{
@@ -554,11 +556,24 @@ Realizando el ejercicio del menu movil
     opacity: 0;
     visibility: hidden;
 }
+.enlacemenu{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
 .menumovil a{
     text-decoration: none;
     color: beige;
+    height: 5rem;
+    margin: auto;
 }
-@media only screen and (max-width: 1024px) {
+.enlacemenuvisible{
+    background-color: yellow;
+    color: black !important;
+}
+
+@media only screen and (min-width: 1024px) {
     .menumovil{
         opacity: 1;
         visibility: visible;
@@ -566,4 +581,11 @@ Realizando el ejercicio del menu movil
     body{
         width: 70%;
     }
+    .boton-up{
+        left: calc(6rem);
+    }
 }
+/*
+bottom: 0.5rem;
+left: 0.5rem;
+*/
