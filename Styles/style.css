@@ -596,3 +596,60 @@ Realizando la seccion
     color: black !important;
     background-color: rgb(228, 253, 0);
 }
+
+
+
+
+
+
+
+
+
+
+/*
+Realizando ejercicio de formulario
+*/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.formulario-div{
+    width: 50%;
+    margin: 1.5rem;
+    position: relative;
+}
+.formulario-div input{
+    width: 100%;
+    z-index: 999;
+}
+.formmsg{
+    height: 4rem;
+}
+.formulario button{
+    width: 30%;
+    height: 2rem;
+}
+.bien{
+    border: 2px solid rgb(30, 192, 30);
+}
+.mal{
+    border: 2px solid rgb(202, 22, 22);
+}
+.div-mensaje{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(202, 22, 22);
+    height: 1rem;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s ease;
+    padding: 3.5px;
+}
+.mensajeerroneo{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(1rem);
+}
