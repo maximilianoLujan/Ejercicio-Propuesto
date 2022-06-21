@@ -620,9 +620,12 @@ Realizando ejercicio de formulario
     margin: 1.5rem;
     position: relative;
 }
-.formulario-div input{
+.input{
     width: 100%;
     z-index: 999;
+    border:  none;
+    border-bottom: 1px solid rgb(8, 8, 8);
+    outline: none;
 }
 .formmsg{
     height: 4rem;
@@ -637,19 +640,22 @@ Realizando ejercicio de formulario
 .mal{
     border: 2px solid rgb(202, 22, 22);
 }
-.div-mensaje{
+.div-mensaje,.errorasunto,.errorname,.erroremail{
     position: absolute;
-    bottom: 0;
+    bottom: -1.5rem;
     background-color: rgb(202, 22, 22);
-    height: 1rem;
+    height: 1.1rem;
     width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: all 2s ease;
     padding: 3.5px;
 }
+.errorname{
+    height: 2rem;
+    bottom: -2.4rem;
+}
 .mensajeerroneo{
     opacity: 1;
     visibility: visible;
-    transform: translateY(1rem);
 }

@@ -43,10 +43,10 @@ const d = document;
         observarvideo("videofutbol");
         countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
         */
+        comprobarFormulario(".formname",".formmatter",".formmail",".formmsg",".errorname",".errorasunto",".erroremail",".div-mensaje");
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
     d.addEventListener("keydown", (e)=>{
         ball(".pelota",".evento",e)
         teclado(e,".pelota");
-        comprobarFormulario(".formname",".formmail",".formmatter",".formmsg",".errorname",".erroremail",".errorasunto",".div-mensaje",e);
     })
