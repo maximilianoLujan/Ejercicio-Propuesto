@@ -17,6 +17,7 @@ import calcSorteo from "./sorte.js";
 import sliderimg from "./slider.js";
 import observarScroll from "./observer.js";
 import observarvideo from "./observer2.js";
+import comprobarFormulario from "./formContact.js";
 
 
 const d = document;
@@ -47,4 +48,5 @@ const d = document;
     d.addEventListener("keydown", (e)=>{
         ball(".pelota",".evento",e)
         teclado(e,".pelota");
+        comprobarFormulario(".formname",".formmail",".formmatter",".formmsg",".errorname",".erroremail",".errorasunto",".div-mensaje",e);
     })
