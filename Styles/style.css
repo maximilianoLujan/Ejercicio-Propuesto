@@ -629,27 +629,11 @@ Realizando ejercicio de formulario
 }
 .formmsg{
     height: 4rem;
+    resize: none;
 }
 .formulario button{
     width: 30%;
     height: 2rem;
-}
-.bien{
-    border: 2px solid rgb(30, 192, 30);
-}
-.mal{
-    border: 2px solid rgb(202, 22, 22);
-}
-.div-mensaje,.errorasunto,.errorname,.erroremail{
-    position: absolute;
-    bottom: -1.5rem;
-    background-color: rgb(202, 22, 22);
-    height: 1.1rem;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 2s ease;
-    padding: 3.5px;
 }
 .errorname{
     height: 2rem;
@@ -658,4 +642,10 @@ Realizando ejercicio de formulario
 .mensajeerroneo{
     opacity: 1;
     visibility: visible;
+}
+.input:valid{
+    border: 2px solid rgb(62, 184, 62);   
+}
+.input:invalid{
+    border:  2px solid rgb(202, 22, 22);
 }
