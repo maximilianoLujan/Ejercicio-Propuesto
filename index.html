@@ -217,19 +217,19 @@
             <h2>Formulario</h2>
             <div class="contenedor-form">
                 <form class="formulario" action="">
-                    <div class="formulario-div">
-                        <input title="Escriba un nombre valido" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" name="name" placeholder="name and surname" required class="formname input" type="text">
+                    <div>
+                        <input title="El nombre no puede tener ni numeros ni caracteres especiales" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" name="name" placeholder="name and surname" required class="formname input" type="text">
                     </div>
-                    <div class="formulario-div">
+                    <div>
                         <input title="Escriba un email valido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" name="email" placeholder="Email" required class="formmail input" type="email">
                     </div>
-                    <div class="formulario-div">
+                    <div>
                         <input title="El asunto debe tener menos de 20 caracteres" pattern="^.{1,20}$" name="asunto" placeholder="Asunto" required class="formmatter input" type="text">
                     </div>
-                    <div class="formulario-div">
-                        <textarea required title="El texto debe contener menos de 255 caracteres" name="texto" placeholder="Escriba su mensaje" class="formmsg input" name="" id="" cols="30" rows="10" data-pattern="^.{1,255}$"></textarea>
+                    <div>
+                        <textarea required title="El mensaje debe contener menos de 255 caracteres" name="texto" placeholder="Escriba su mensaje" class="formmsg input" name="" id="" cols="30" rows="10" data-pattern="^.{1,255}$"></textarea>
                     </div>
-                    <button class="formsubmit" type="submit"><b>Enviar</b></button>
+                    <button class="formsubmit" type="submit">Enviar</button>
                     <div class="formloader">
                         <img src="Images/Loader/bars.svg" alt="cargando">
                     </div>

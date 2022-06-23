@@ -17,6 +17,7 @@ import calcSorteo from "./sorte.js";
 import sliderimg from "./slider.js";
 import observarScroll from "./observer.js";
 import observarvideo from "./observer2.js";
+import comprobarForm from "./FormularioContacto.js";
 
 
 const d = document;
@@ -42,6 +43,7 @@ const d = document;
         observarvideo("videofutbol");
         countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
         */
+       comprobarForm();
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
     d.addEventListener("keydown", (e)=>{
