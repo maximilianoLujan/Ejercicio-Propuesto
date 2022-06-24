@@ -16,7 +16,7 @@ export default function narrarVoz(){
             })
             clearInterval(timer);
         }
-    }, 200);
+    }, 500);
     d.addEventListener("click", e=>{
         if (e.target.matches(".seccion15-btn")){
             if($txt.value === "" ||($select.selectedOptions[0].value === "no")){

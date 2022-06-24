@@ -19,11 +19,11 @@ import observarScroll from "./observer.js";
 import observarvideo from "./observer2.js";
 import comprobarForm from "./FormularioContacto.js";
 import narrarVoz from "./narrador.js";
+import verinformacion from "./info.js";
 
 
 const d = document;
     d.addEventListener("DOMContentLoaded", e=>{
-        /*
         alert("Se inicio una cuenta regresiva para dentro de 10 minutos")
         let fecha = new Date();
         fecha.setMinutes(fecha.getMinutes() + 10,0,0);
@@ -43,9 +43,9 @@ const d = document;
         observarScroll(".seccion");
         observarvideo("videofutbol");
         countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
-        */
        comprobarForm();
        narrarVoz();
+       verinformacion();
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
     d.addEventListener("keydown", (e)=>{
