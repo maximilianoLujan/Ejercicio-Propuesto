@@ -18,6 +18,7 @@ import sliderimg from "./slider.js";
 import observarScroll from "./observer.js";
 import observarvideo from "./observer2.js";
 import comprobarForm from "./FormularioContacto.js";
+import narrarVoz from "./narrador.js";
 
 
 const d = document;
@@ -44,6 +45,7 @@ const d = document;
         countdown(".days",".mi-img",".mi-audio",".hours",".minutes",".seconds",fecha)
         */
        comprobarForm();
+       narrarVoz();
     })
     darkMode(".boton-dark","dark-mode","dark-mode2",".boton");
     d.addEventListener("keydown", (e)=>{

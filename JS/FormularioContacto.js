@@ -24,4 +24,23 @@ export default function comprobarForm(){
             }
         }
     })
+    d.addEventListener("submit", e=>{
+        e.preventDefault();
+        if (e.target.matches(".formulario")){
+            const $miloader =d.querySelector(".loader"),
+                $mitexto = d.querySelector(".response");
+
+            setTimeout(() => {
+                $miloader.classList.remove("none");
+                e.target.reset();
+                setTimeout(() => {
+                    $miloader.classList.add("none");
+                    $mitexto.classList.remove("none");
+                    setTimeout(() => {
+                        $mitexto.classList.add("none");
+                    }, 2000);
+                }, 3000);
+            }, 500);
+        }
+    })
 }

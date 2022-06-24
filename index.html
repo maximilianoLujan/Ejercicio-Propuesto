@@ -213,7 +213,7 @@
                 <video id="videofutbol" src="Videos/throwingfootball.mp4" controls loop></video>
             </div>
         </section>
-        <section id="seccion14" class="seccion">
+        <section id="seccion14" class="seccion seccion14">
             <h2>Formulario</h2>
             <div class="contenedor-form">
                 <form class="formulario" action="">
@@ -229,18 +229,24 @@
                     <div>
                         <textarea required title="El mensaje debe contener menos de 255 caracteres" name="texto" placeholder="Escriba su mensaje" class="formmsg input" name="" id="" cols="30" rows="10" data-pattern="^.{1,255}$"></textarea>
                     </div>
-                    <button class="formsubmit" type="submit">Enviar</button>
-                    <div class="formloader">
-                        <img src="Images/Loader/bars.svg" alt="cargando">
+                    <input class="formsubmit" type="submit" value="Enviar">
+                    <div style="display: flex;" class="formloader">
+                        <img class="loader none" src="Images/Loader/bars.svg" alt="cargando">
                     </div>
-                    <div>
-                        <p>Los datos han sido enviados correctamente</p>
+                    <div style="display: flex;">
+                        <p class="response none">Los datos han sido enviados correctamente</p>
                     </div>
                 </form>
             </div>
         </section>
-        <section id="seccion15" class="seccion">
-            
+        <section id="seccion15" class="seccion seccion15">
+            <h2>Narrador De Voz</h2>
+            <select required class="seccion15-slct" name="idioma" id="">
+                <option value="no">Seleccione el idioma en el que desea escuchar el texto</option>
+            </select>
+            <textarea class="seccion15-txt" required name="texto" id="" cols="30" rows="10"></textarea>
+            <button class="seccion15-btn">Leer Mensaje</button>
+            </div>
         </section>
 
         
